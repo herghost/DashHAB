@@ -32,7 +32,7 @@ public class MainActivity extends Activity implements WeatherCallback {
         c._OpenHab.setPort("8080");
 
         //OpenWeather
-        c._OpenWeather.setApiKey("90b20fa918eacb1d3585e379cebc7b3d");
+        c._OpenWeather.setApiKey("");
         c._OpenWeather.setCityID(2633352);
     }
 

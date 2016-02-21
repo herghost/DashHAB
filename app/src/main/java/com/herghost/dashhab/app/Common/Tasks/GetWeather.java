@@ -19,6 +19,7 @@ import static com.herghost.dashhab.app.Common.Results.OpenWeatherResult.*;
 
 /**
  * Created by hergh on 21/02/2016.
+ * Gets the weather and forecasts from openweathermap
  */
 public class GetWeather extends AsyncTask<Void,Void,Void> {
 
