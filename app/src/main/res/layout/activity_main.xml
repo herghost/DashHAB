@@ -1,12 +1,108 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="${relativePackage}.${activityClass}">
+    tools:context="${relativePackage}.${activityClass}"
+        android:columnCount="8"
+        android:rowCount="4">
 
-    <TextView
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
-</RelativeLayout>
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="fill_horizontal"
+                android:layout_weight="0.25">
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/arse_fix"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_gravity="fill_horizontal"
+                android:layout_weight="0.25">
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/events"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+        </LinearLayout>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25">
+
+            <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView"
+                    android:src="@drawable/clock"
+                    android:background="#ffffff"/>
+
+            <TextClock
+                    android:id="@+id/textClock1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="#17d409"
+                    android:textSize="44sp"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/tvDate"
+                    android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25">
+
+            <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView2"
+                    android:src="@drawable/weather"
+                    android:background="#ffff00"/>
+
+            <TextClock
+                    android:id="@+id/textClock"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="#17d409"
+                    android:textSize="44sp"
+                    android:textStyle="bold"/>
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/textView"
+                    android:gravity="center"/>
+        </LinearLayout>
+    </TableRow>
+
+
+</TableLayout>

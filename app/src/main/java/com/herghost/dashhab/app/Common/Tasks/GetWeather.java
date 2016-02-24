@@ -2,8 +2,11 @@ package com.herghost.dashhab.app.Common.Tasks;
 
 import android.os.AsyncTask;
 import android.util.Log;
-import com.google.gson.*;
-import com.herghost.dashhab.app.Common.Callbacks.WeatherCallback;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.herghost.dashhab.app.Common.Callbacks.Callbacks;
 import com.herghost.dashhab.app.Common.Config;
 import com.herghost.dashhab.app.Common.Results.OpenWeatherResult;
 import com.herghost.dashhab.app.Common.Results.forecast;
@@ -11,10 +14,9 @@ import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+
 import java.io.IOException;
 import java.util.ArrayList;
-
-import static com.herghost.dashhab.app.Common.Results.OpenWeatherResult.*;
 
 
 /**
@@ -24,11 +26,11 @@ import static com.herghost.dashhab.app.Common.Results.OpenWeatherResult.*;
 public class GetWeather extends AsyncTask<Void,Void,Void> {
 
 
-    WeatherCallback cb;
+   Callbacks cb;
     OpenWeatherResult owr;
     Config c;
 
-    public GetWeather(WeatherCallback _cb, Config _c)
+    public GetWeather(Callbacks _cb, Config _c)
     {
         this.cb = _cb;
         this.c = _c;

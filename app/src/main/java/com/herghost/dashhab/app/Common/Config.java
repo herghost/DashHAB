@@ -32,6 +32,7 @@ public class Config {
     {
         String ApiKey;
         int CityID;
+        Boolean displayWeather;
 
         public String getApiKey() {
             return ApiKey;
@@ -47,6 +48,14 @@ public class Config {
 
         public void setCityID(int cityID) {
             CityID = cityID;
+        }
+
+        public Boolean getDisplayWeather() {
+            return displayWeather;
+        }
+
+        public void setDisplayWeather(Boolean displayWeather) {
+            this.displayWeather = displayWeather;
         }
     }
 
